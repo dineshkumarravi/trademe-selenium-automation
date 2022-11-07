@@ -2,7 +2,7 @@
 
 # *Trade Me- Test Automation Solution using Selenium with Java & RestAssured, Cucumber-BDD, Page Object model approach, TestNG and Maven* 
 
-**(1) First we have to copy git repository on our local system and given the below commands from command line(cmd) for execution:**
+**(1) First we have to copy git repository on our local system and given the below commands into command line(cmd) for execution:**
 
 ```
 git clone https://github.com/dineshkumarravi/trademe-selenium-automation.git
@@ -15,6 +15,7 @@ mvn clean test
 ```
 (1) Install Java - openjdk11 and Maven
 (2) Install Intelij IDE
+(3) Chrome Browser
 
 ```
 **(3) Project Structure:**
