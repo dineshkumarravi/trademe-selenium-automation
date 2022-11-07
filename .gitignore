@@ -1,0 +1,21 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
+
+.classpath
+.project
+.settings
+Screenshots
+target
+.idea/
+*.iml
+logs
