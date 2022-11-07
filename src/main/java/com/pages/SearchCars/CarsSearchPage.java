@@ -1,4 +1,4 @@
-package com.pages.SearchCar;
+package com.pages.SearchCars;
 
 import com.utils.PageUtils;
 import org.openqa.selenium.By;
@@ -17,7 +17,7 @@ import java.util.Map;
  *
  * @author Dineshkumar.
  */
-public class CarSearchPage extends PageUtils {
+public class CarsSearchPage extends PageUtils {
 
     public HashMap<String, String> carMakeCountDetails = new HashMap<String, String>();
     public WebDriver driver;
@@ -40,7 +40,7 @@ public class CarSearchPage extends PageUtils {
     /**
      * Initialize page elements
      */
-    public CarSearchPage(WebDriver driver) {
+    public CarsSearchPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

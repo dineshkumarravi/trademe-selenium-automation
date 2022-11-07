@@ -1,6 +1,6 @@
 package com.stepdefinitions;
 
-import com.pages.SearchCar.CarSearchPage;
+import com.pages.SearchCars.CarsSearchPage;
 import com.utils.CommonUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,10 +14,10 @@ import java.util.List;
 public class CarSearchStepDefinitions {
 
     public final WebDriver driver = CommonUtils.getDriverInstance();
-    public CarSearchPage carSearchPage;
+    public CarsSearchPage carSearchPage;
 
     public CarSearchStepDefinitions() {
-        carSearchPage = new CarSearchPage(driver);
+        carSearchPage = new CarsSearchPage(driver);
     }
 
     @Given("I am on the trademe webpage to choose the motors search option")

@@ -3,9 +3,8 @@ package com.stepdefinitions;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
-import com.pages.SearchCar.CarSearchPage;
+import com.pages.SearchCars.CarsSearchPage;
 import com.utils.CommonUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,10 +24,10 @@ public class CarMakeApiSteps {
     private static final String BASE_API_URL = "https://api.trademe.co.nz";
     private String categoryNumber = "0001-0268";
 
-    public CarSearchPage carSearchPage;
+    public CarsSearchPage carSearchPage;
 
     public CarMakeApiSteps() {
-        carSearchPage = new CarSearchPage(driver);
+        carSearchPage = new CarsSearchPage(driver);
     }
 
     @Given("I fetch the car make details by sending api request")
