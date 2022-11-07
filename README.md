@@ -1,8 +1,8 @@
 
 
-# *Trade Me-Selenium Test Automation Framework with Page Object model using Cucumber-BDD,Selenium with Java,TestNG and Maven* 
+# *Trade Me- Test Automation Solution using Selenium with Java & RestAssured, Cucumber-BDD, Page Object model approach, TestNG and Maven* 
 
-**(1) First we have to copy git repository on our local system and given the below commands from command line(cmd):**
+**(1) First we have to copy git repository on our local system and given the below commands from command line(cmd) for execution:**
 
 ```
 git clone https://github.com/dineshkumarravi/trademe-selenium-automation.git
@@ -29,7 +29,7 @@ mvn clean test
   * src/test/java
     - stepdefinitions
   * src/test/resources
-       - features
+       - features - Cars Make search
             *It consists of the following Two web tests and One Api test scenarios
                 (1) To verify the number of named car makes count in Make dropdown
                 (2) To verify cars results count based on make search
