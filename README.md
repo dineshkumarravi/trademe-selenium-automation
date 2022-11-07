@@ -30,6 +30,10 @@ mvn clean test
     - stepdefinitions
   * src/test/resources
        - features
+            *It consists of the following Two web tests and One Api test scenarios
+                (1) To verify the number of named car makes count in Make dropdown
+                (2) To verify cars results count based on make search
+                (3) To verify the number of named car makes count using Trade Me Api
       
   * pom.xml - maven dependencies    
 ```
