@@ -1,4 +1,4 @@
-Feature: Cars Make Search
+Feature: Cars API
   As a user
   I want to look for list of cars are available in Trade Me Api
   So that I can verify number of named car makes count.
