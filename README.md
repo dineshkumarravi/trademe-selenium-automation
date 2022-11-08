@@ -38,7 +38,7 @@ mvn clean test
       
   * pom.xml - maven dependencies    
 ```
-**(4) Run test from different areas:**
+**(4) Different ways to run the tests:**
 ```
 * Once we copy this project on local system either we can run the test cases from command line using mvn clean test
   or from any IDE of your preference.
@@ -46,7 +46,9 @@ mvn clean test
 * We can also run from RunnerTest.java file where right click on it and run as a RunnerTest.
 
 * #Report will be generated inside **target folder. 
-  **For test report,cucumber-reports.html file will be generated after every run.
+  **For the test report,cucumber-reports.html file will be generated after every run.
   
 * If you want to see any failure report then you have to change id or xpath in the tests or pages. It will
   capture failed screenshot in FailedTestsScreenshots folder after every scenario runs and can see error traces in the report.
+
+* Added sample FailedScreenshot and report folder in git repo for your reference.

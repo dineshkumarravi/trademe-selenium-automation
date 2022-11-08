@@ -35,10 +35,11 @@ public class CarSearchStepDefinitions {
         carSearchPage.clickMakeCarDropdown();
     }
 
-    @Then("I can verify number of named car makes count as {int}")
-    public void i_can_verify_named_make_cars_countAs(int count) {
+    @Then("I can verify number of named car makes count in the dropdown")
+    public void i_can_verify_named_make_cars_count() {
         int noOfNamedCarMakes = carSearchPage.getCarMakeCount();
-        Assert.assertEquals(noOfNamedCarMakes, count);
+        Assert.assertTrue(noOfNamedCarMakes>0);
+        System.out.println("The number of named car make count in the make dropdown are " + noOfNamedCarMakes);
     }
 
     @And("I select make option")

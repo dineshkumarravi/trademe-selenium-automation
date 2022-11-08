@@ -3,6 +3,7 @@ package com.stepdefinitions;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import com.pages.SearchCars.CarsSearchPage;
 import com.utils.CommonUtils;
@@ -21,8 +22,9 @@ public class CarMakeApiSteps {
     private static Response response;
     private static String jsonString;
     private static List<Map<String, String>> noOfCarsMakeFromApi;
-    private static final String BASE_API_URL = "https://api.trademe.co.nz";
-    private String categoryNumber = "0001-0268";
+    private static Properties props = CommonUtils.getPropertyFile();
+    private static final String BASE_API_URL = props.getProperty("apiurl"); ;
+    private final String categoryNumber = "0001-0268";
 
     public CarsSearchPage carSearchPage;
 
@@ -48,8 +50,7 @@ public class CarMakeApiSteps {
     public void i_can_verify_number_of_named_cars_make_count() {
         Assert.assertTrue(noOfCarsMakeFromApi.size() > 0);
         System.out.println("The number of named car make count from API are " + (noOfCarsMakeFromApi.size() - 1));
-        //Compare api count with web count
-        Assert.assertEquals(noOfCarsMakeFromApi.size() - 1, carSearchPage.getCarMakeCount());
+        //Additional assert if we want to compare api count with web count
+        Assert.assertEquals(carSearchPage.getCarMakeCount(), noOfCarsMakeFromApi.size() - 1);
     }
 }
-

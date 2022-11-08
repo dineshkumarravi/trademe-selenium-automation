@@ -29,12 +29,9 @@ public class CommonUtils {
      */
     public static WebDriver initializeDriver() {
         try {
-            props = new Properties();
-            String path = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
-            FileInputStream fs = new FileInputStream(path);
-            props.load(fs);
             ChromeOptions option = new ChromeOptions();
             option.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            props = getPropertyFile();
             switch (props.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
@@ -59,6 +56,22 @@ public class CommonUtils {
 
     public static WebDriver getDriverInstance() {
         return driver;
+    }
+
+    /**
+     * Get the config.properties file
+     */
+
+    public static Properties getPropertyFile() {
+        try {
+            String path = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
+            props = new Properties();
+            FileInputStream fs = new FileInputStream(path);
+            props.load(fs);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return props;
     }
 
     /**
