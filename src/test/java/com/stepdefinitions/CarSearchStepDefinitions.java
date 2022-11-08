@@ -39,7 +39,10 @@ public class CarSearchStepDefinitions {
     public void i_can_verify_named_make_cars_count() {
         int noOfNamedCarMakes = carSearchPage.getCarMakeCount();
         Assert.assertTrue(noOfNamedCarMakes>0);
-        System.out.println("The number of named car make count in the make dropdown are " + noOfNamedCarMakes);
+        System.out.println("\nThe number of named car make count in the make dropdown are " + noOfNamedCarMakes);
+        //Just for additional one, if we know the total count before, we can hardcode the expected one and get it from web & verify
+        // But handled api count comparison with web as separate api test
+        Assert.assertEquals(carSearchPage.getCarMakeCount(),77);
     }
 
     @And("I select make option")
